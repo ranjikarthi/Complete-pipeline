@@ -11,7 +11,7 @@ pipeline {
         stage('Provision Server') {
             steps {
                 bat '''
-                ssh ubuntu@your_server_ip "sudo apt update && sudo apt install docker.io -y"
+                ssh ranji@172.20.102.67 "sudo apt update && sudo apt install docker.io -y"
                 '''
             }
         }
