@@ -11,11 +11,11 @@ pipeline {
         stage('Provision Server') {
             steps {
                 bat '''
-                wsl ansible-playbook -i ansible/inventory ansible/playbook.yml
+                C:\\Windows\\System32\\wsl.exe ansible-playbook -i ansible/inventory ansible/playbook.yml
                 '''
             }
         }
-
+   
         stage('Build Docker Image') {
             steps {
                 bat '''
