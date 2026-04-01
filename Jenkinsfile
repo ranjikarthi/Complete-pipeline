@@ -11,7 +11,7 @@ pipeline {
         stage('Provision Server') {
             steps {
                 bat '''
-                C:\\Windows\\System32\\wsl.exe ansible-playbook -i ansible/inventory ansible/playbook.yml
+                ssh ubuntu@your_server_ip "sudo apt update && sudo apt install docker.io -y"
                 '''
             }
         }
