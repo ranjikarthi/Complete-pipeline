@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/your-username/your-repo.git'
-            }
-        }
-
         stage('Provision Server') {
             steps {
                 bat '''
